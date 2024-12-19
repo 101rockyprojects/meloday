@@ -1,5 +1,8 @@
 {
   "name": "meloday",
+  "description": "A melody each day",
+  "homepage": "https://101rockyprojects.github.io/meloday/",
+  "author": "Rocky",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -7,7 +10,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "tailwind": "tailwindcss build src/styles.css -o dist/styles.css"
+    "tailwind": "tailwindcss build src/styles.css -o dist/styles.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
