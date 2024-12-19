@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100dvw, 1fr));
+  gap: 10px;
+  min-width: 80dvw;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card  {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(150deg, #EC1A1A 0%, #4C86F9 100%);
+  border-radius: 1.2em;
+  margin: 1.2em 0;
+  transition: all .3s;
+  width: clamp(85%, 95%, 20em);
+}:hover hr {
+  border: 0;
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(128deg, #7350FC 0%, #C3258D 100%) 1;
+}
+
+.readex-thin {
+  @apply font-readex font-light;
+  letter-spacing: 0.05em;
+}
+
+.readex-bold {
+  @apply font-readex font-bold;
+  letter-spacing: 0.05em;
+}
+
+.shadows {
+  @apply font-shadows font-light;
+  letter-spacing: 0.05em;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/public/fonts/ReadexPro-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/public/fonts/ReadexPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shadows Into Light';
+  src: url('/public/fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer utilities {
+  .animate-rain {
+    animation: makeItRain 3s infinite linear;
+  }
+}
