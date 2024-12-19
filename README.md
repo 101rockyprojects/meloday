@@ -29,9 +29,9 @@ El proyecto permite a través del parámetro `song` elegir la canción que desee
 
 Intenta con una canción que seguramente ya habrás escuchado:
 
-[Ejemplo canción usando video id from Youtube](https://meloday.host/?song=o-YBDTqX_ZU&autoplay=1)
+[Ejemplo canción usando video id from Youtube](https://101rockyprojects.github.io/meloday/?song=o-YBDTqX_ZU&autoplay=1)
 ```
-https://meloday.host/?song=o-YBDTqX_ZU&autoplay=1
+https://101rockyprojects.github.io/meloday/?song=o-YBDTqX_ZU&autoplay=1
 ```
 > Un clásico...
 
@@ -44,9 +44,9 @@ El proyecto también permite a través del parámetro `day` elegir el día del a
 
 Para saber la canción del día 28 del quinto mes (28 de mayo del respectivo año). O cualquier día que desees:
 
-[Ejemplo Canción del 28 de mayo](https://meloday.host/?day=28-05)
+[Ejemplo Canción del 28 de mayo](https://101rockyprojects.github.io/meloday/?day=28-05)
 ```
-https://meloday.host/?day=28-05
+https://101rockyprojects.github.io/meloday/?day=28-05
 ```
 
 > ¿Y qué tal intentar con 31 de Febrero? Te reto a averiguarlo ;)

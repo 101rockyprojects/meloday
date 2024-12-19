@@ -8,7 +8,7 @@
         <h2 class="error-title text-amoure">{title}</h2>
         <div class="error-message text-white readex-thin opacity-80">
             {msg}
-            <img src="/images/youtube-error.png" width="90" height="85" alt="Youtube icon error" />
+            <img src="./images/youtube-error.png" width="90" height="85" alt="Youtube icon error" />
         </div>
     </div>
 {/if}

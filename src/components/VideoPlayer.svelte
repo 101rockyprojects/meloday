@@ -62,7 +62,7 @@
       if (!video) {
         isLoading = false;
       }
-      const maxTitleLength = 60;
+      const maxTitleLength = 52;
       videoTitle = video.snippet.title.length > maxTitleLength ? 
                    video.snippet.title.slice(0, maxTitleLength - 3) + '...' : 
                    video.snippet.title;
