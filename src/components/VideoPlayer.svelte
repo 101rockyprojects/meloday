@@ -11,7 +11,6 @@
     import { isSpecialDateToday } from '@App/stores/isSpecialDateToday.js';
     
     let video;
-    let autoplay = '';
     let videoTitle = '';
     let videoId = '';
     let isLoading = true;
@@ -26,16 +25,12 @@
       todayNumber.set(getDayNumber(today));
       let isSpecialToday = isSpecialDate(today, specialDates);
 
-      autoplay = getParameterByName('autoplay');
-      if (autoplay === 'true' || autoplay === '1') {
-        autoplay = '?autoplay=1';
-      }
-      const songIdParam = getParameterByName('song');
+      const videoIdParam = getParameterByName('v') || getParameterByName('song');
       const dayParam = getParameterByName('day');
 
       try {
-        if (songIdParam) {
-          video = await getVideoById(songIdParam, apiKey);
+        if (videoIdParam) {
+          video = await getVideoById(videoIdParam, apiKey);
           if (!video) {
             console.error("Invalid request, video not found for 'song' parameter.");
           }
@@ -84,7 +79,7 @@
               {/each}
             </div>
         {:else if showVideo && !isLoading}
-            <Video {videoTitle} {videoId} {autoplay}/>
+            <Video {videoTitle} {videoId}/>
         {:else}
               <Oops title="Oops," msg="No se encontro el video, pudo haber sido borrado o se encuentra privado." />
         {/if}
