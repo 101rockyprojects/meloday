@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [svelte()],
-  base: '/meloday',
+  base: '/meloday/',
   resolve: {
     alias: {
       '@App': resolve(__dirname, './src'),
