@@ -1,14 +1,11 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "meloday",
   "main": ".svelte-kit/cloudflare/_worker.js",
   "compatibility_date": "2026-05-10",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "binding": "ASSETS",
-    "directory": ".svelte-kit/cloudflare"
-  },
-  "observability": {
-    "enabled": true
+    "directory": ".svelte-kit/cloudflare",
+    "not_found_handling": "single-page-application",
+    "binding": "ASSETS"
   }
 }

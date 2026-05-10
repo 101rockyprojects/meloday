@@ -1,8 +1,9 @@
 name = "meloday"
+main = ".svelte-kit/cloudflare/_worker.js"
 compatibility_date = "2026-05-10"
 compatibility_flags = ["nodejs_compat"]
-main = ".svelte-kit/cloudflare/_worker.js"
 
 [assets]
 directory = ".svelte-kit/cloudflare"
+not_found_handling = "single-page-application"
 binding = "ASSETS"
