@@ -8,6 +8,8 @@ También incluye frases relacionadas con la música para acompañar la experienc
 
 ## ¿Cómo funciona?
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/101rockyprojects/meloday)
+
 El proyecto utiliza [SvelteKit](https://svelte.dev/docs/kit) (sobre [Vite](https://vite.dev/)) y [Svelte 5](https://svelte.dev/) con ayuda de la [API de Youtube](https://developers.google.com/youtube/v3) para crear una interfaz simple pero atractiva que muestra la canción del día junto con una cita inspiradora relacionada con la música.
 
 Es una migración hacia Svelte del proyecto [365-days](https://github.com/101rockyprojects/365-days/) que fue hecho con Javascript puro, y me sirvió para aprender desde cero cada una de las herramientas anteriormente nombradas.
