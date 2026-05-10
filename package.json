@@ -7,7 +7,9 @@
     "dev": "vite dev --port 4000",
     "build": "vite build",
     "preview": "vite preview --port 4000",
-    "deploy": "npm run build"
+    "deploy": "npm run build",
+    "cf:pages:dev": "npm run build && wrangler pages dev .svelte-kit/cloudflare",
+    "cf:pages:deploy": "npm run build && wrangler pages deploy .svelte-kit/cloudflare"
   },
   "devDependencies": {
     "@sveltejs/adapter-cloudflare": "^6.0.0",
