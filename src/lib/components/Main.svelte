@@ -1,0 +1,64 @@
+<script>
+  import TypedAnimatedTitle from '@App/lib/components/TypedAnimatedTitle.svelte';
+  import TodayDate from '@App/lib/components/TodayDate.svelte';
+  import VideoPlayer from '@App/lib/components/VideoPlayer.svelte';
+  import { isLeapYear } from '@App/lib/functions/dates.js';
+  import QuickGuide from './QuickGuide.svelte';
+  
+  const numberOfDays = isLeapYear() ? '366' : '365';
+  const animatedWords = [
+    'Meloday', 'A melody each day', 'Dedicated to you',
+    'Melodía', 'Una melodía cada día', 'Te la dedico'
+  ];
+</script>
+
+<main>
+    <section class="min-h-screen relative mt-5 space-y-8 md:space-y-4">
+        <div style="absolute top-12 w-[80%] text-center flex flex-col items-center">
+            <TypedAnimatedTitle {animatedWords} 
+                replacingDelay={3500}
+                typeDelay={1000}
+                style="text-5xl md:text-[3.5rem] lg:text-[4rem]"
+                styleAnimatedText="from-amoure via-gummy to-blue-berry bg-gradient-to-r text-transparent bg-clip-text"/>
+            <div class="readex-thin text-base md:text-lg lg:text-xl mt-1 font-shadows">
+                <TodayDate />
+                <span class="text-white/70 font-shadows"> ({numberOfDays} días) </span>
+            </div>
+        </div>
+        <VideoPlayer />
+    </section>
+
+    <hr class="h-[5px] my-8 border-1 border-opacity-30 opacity-20 transition-all duration-500 ease-in-out">
+
+    <QuickGuide />
+
+    <hr class="h-[5px] my-8 border-1 border-opacity-30 opacity-20 transition-all duration-500 ease-in-out">
+
+    <footer class="flex flex-col justify-center items-center mb-8 text-sm z-50 readex-thin relative space-y-4">
+        <span class="flex items-center gap-2 text-lg font-shadows"> By 101rockyprojects, made with
+            <svg width="14px" height="14px" viewBox="-15.41 0 126.74 126.74" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:transparent;}</style> </defs> <g id="Layer_2" data-name="Layer 2"> <g id="Layer_1-2" data-name="Layer 1"> <path d="M51.31,27.71c3.14-4.32,5.57-7.81,8.14-11.18,3.41-4.48,8.16-7.16,13.23-9.25A13.76,13.76,0,0,1,78.5,6.22c8.49.52,16.2,8,17.14,16.56,1.14,10.28-1.35,20-5.58,29.15A156.23,156.23,0,0,1,70.73,84.24c-6.9,8.67-14.2,17.12-18.87,27.35-1.77,3.89-3.5,7.8-5.28,11.68a5.53,5.53,0,0,1-9.68,1.09A13.66,13.66,0,0,1,35,120.52c-4.77-14.21-12.35-27.06-19.62-40-5.07-9-9.77-18.2-12.59-28.13C-.75,39.72-1.63,26.93,4.32,14.62a35.18,35.18,0,0,1,6.19-9.16A17.46,17.46,0,0,1,31.8,2.27c9,5.18,16.1,11.83,18.41,22.46A28.62,28.62,0,0,0,51.31,27.71ZM47.89,50.89c-.61-.76-1.68-1.52-2-2.51-1.31-4.67-3.16-9.37-3.4-14.12-.46-9.08-4.81-15.65-11.4-21.2-5.58-4.71-10.79-4-15.29,2C11.1,21.33,10,28.51,10.39,36.13c.46,9.64,3.68,18.52,8,26.95,6.1,12,12.57,23.76,19,35.52,1.45,2.64,2.07,5.9,5.69,8.77.67-1.22,1.14-2.25,1.76-3.18,4.46-6.62,8.9-13.26,13.43-19.83S67.79,71.45,72,64.67c5-8,9.38-16.4,11.76-25.61,1.13-4.4,2.51-9,2.27-13.44-.51-9.44-5.55-12.23-13.72-7A32.7,32.7,0,0,0,61.14,31.37c-2.6,5.07-5,10.27-7.12,15.55C52.87,49.79,51,50.86,47.89,50.89Z"></path> <path class="cls-1" d="M47.89,50.89c3.11,0,5-1.1,6.13-4,2.13-5.28,4.52-10.48,7.12-15.55A32.7,32.7,0,0,1,72.33,18.65c8.17-5.26,13.21-2.47,13.72,7,.24,4.44-1.14,9-2.27,13.44C81.4,48.27,77,56.67,72,64.67c-4.23,6.78-9.18,13.11-13.73,19.69s-9,13.21-13.43,19.83c-.62.93-1.09,2-1.76,3.18-3.62-2.87-4.24-6.13-5.69-8.77-6.48-11.76-12.95-23.54-19-35.52-4.29-8.43-7.51-17.31-8-26.95C10,28.51,11.1,21.33,15.84,15c4.5-6,9.71-6.69,15.29-2,6.59,5.55,10.94,12.12,11.4,21.2.24,4.75,2.09,9.45,3.4,14.12C46.21,49.37,47.28,50.13,47.89,50.89Z"></path> </g> </g> </g></svg>
+        </span>
+        <div class="flex justify-center items-center flex-row gap-4 sm:gap-6">
+            <a href="https://github.com/101rockyprojects" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 text-white/80 hover:hover:scale-110 transition-all no-underline">
+                <img class="w-8" src="/meloday/images/github.png" alt="GitHub icon">
+                <span class="inline font-semibold">GitHub</span>
+            </a>
+            |
+            <a href="https://101rockyprojects.github.io/portafolio/" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 text-white/80 hover:scale-110 transition-all no-underline">
+                <img class="w-8 invert" src="https://101rockyprojects.github.io/portafolio/images/icon.svg" alt="Portafolio icon">
+                <span class="inline font-semibold">Portafolio</span>
+            </a>
+        </div>
+    </footer>
+</main>
+
+
+<style>
+    main {
+        font-family: 'Readex Pro';
+        src: url('./fonts/ReadexPro-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        min-width: 80dvw;
+    }
+</style>
