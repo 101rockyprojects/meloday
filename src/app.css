@@ -52,7 +52,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card  {
+.card {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,8 @@ button:focus-visible {
   margin: 1.2em 0;
   transition: all .3s;
   width: clamp(85%, 95%, 20em);
-}:hover hr {
+}
+:hover hr {
   border: 0;
   border-top: 1px solid transparent;
   border-image: linear-gradient(128deg, #7350FC 0%, #C3258D 100%) 1;
@@ -84,21 +85,21 @@ button:focus-visible {
 
 @font-face {
   font-family: 'Readex Pro';
-  src: url('/public/fonts/ReadexPro-Light.ttf') format('truetype');
+  src: url('/fonts/ReadexPro-Light.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Readex Pro';
-  src: url('/public/fonts/ReadexPro-Bold.ttf') format('truetype');
+  src: url('/fonts/ReadexPro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shadows Into Light';
-  src: url('/public/fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
+  src: url('/fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }

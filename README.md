@@ -1,15 +1,14 @@
 
----
-
 # Meloday: Una melodía para cada día
-### ¡Perfecto para dedicar a una persona especial!
+
+> ¡Perfecto para dedicar a una persona especial!
 
 Este proyecto proporciona una canción diferente para cada día del año. Utiliza la [API de Youtube](https://developers.google.com/youtube/v3) para obtener una lista de reproducción especial y selecciona la canción correspondiente al día actual.
 También incluye frases relacionadas con la música para acompañar la experiencia.
 
 ## ¿Cómo funciona?
 
-El proyecto utiliza [Vite](https://vite.dev/) y [Svelte 5](https://svelte.dev/), con ayuda de la [API de Youtube](https://developers.google.com/youtube/v3) para crear una interfaz simple pero atractiva que muestra la canción del día junto con una cita inspiradora relacionada con la música.
+El proyecto utiliza [SvelteKit](https://svelte.dev/docs/kit) (sobre [Vite](https://vite.dev/)) y [Svelte 5](https://svelte.dev/) con ayuda de la [API de Youtube](https://developers.google.com/youtube/v3) para crear una interfaz simple pero atractiva que muestra la canción del día junto con una cita inspiradora relacionada con la música.
 
 Es una migración hacia Svelte del proyecto [365-days](https://github.com/101rockyprojects/365-days/) que fue hecho con Javascript puro, y me sirvió para aprender desde cero cada una de las herramientas anteriormente nombradas.
 
@@ -17,35 +16,71 @@ La aplicación tiene en cuenta la cantidad de canciones para que, en caso de no 
 
 ---
 
-# Personalización
+## Personalización
 
 Puedes agregar en el ```.env``` tu propia playlist y los días espaciales (cumpleaños, aniversario, etc). Los controlas a través del *store* ```variables.js```, también puedes cambiar las frases que se muestran en ```quotes.js```, y las que se muestran solo en fechas especiales ```specialQuotes.js```.
 
 Una vez configurados como en el ```.env.example```, puedes revisar cuál es tu canción del día o utilizar las siguientes opciones:
 
-## 1. Elige la canción que desees:
+---
+
+## Rutas (SvelteKit)
+
+La app está configurada para funcionar bajo el *base path* `/meloday` (ideal para GitHub Pages), por lo que las URLs quedan así:
+
+- Página principal: `http://localhost:4000/meloday/`
+- Video por id (ruta corta): `http://localhost:4000/meloday/dQw4w9WgXcQ`
+- Video por id (estilo YouTube): `http://localhost:4000/meloday/watch/dQw4w9WgXcQ`
+- Por día del año: `http://localhost:4000/meloday/?day=DD-MM`
+
+> También se mantienen los parámetros `?v=VIDEO_ID` y `?song=VIDEO_ID`.
+
+---
+
+## QuickGuide (nuevo)
+
+La app incluye un panel de ayuda **QuickGuide** (abajo a la derecha) para pegar links de YouTube y convertirlos automáticamente a URLs de Meloday, con botones de copiar y ejemplos de rutas soportadas.
+
+---
+
+## API (nuevo)
+
+Endpoint:
+
+- `GET /meloday/api/v1`
+- opcional: `GET /meloday/api/v1?day=DD-MM`
+
+Devuelve JSON con `videoId`, `name`, `quote`, `date` y enlaces sugeridos (query, watch, short, etc.).
+
+## 1. Elige la canción que desees
+
 El proyecto permite a través del parámetro `song` elegir la canción que desees dedicar con ayuda del id del video de dicho video en Youtube (la serie de caracteres luego del `watch?v=`).
-### Ejemplo:
+
+### Ejemplo de canción
 
 Intenta con una canción que seguramente ya habrás escuchado:
 
 [Ejemplo canción usando video id from Youtube](https://101rockyprojects.github.io/meloday/?song=o-YBDTqX_ZU&autoplay=1)
-```
+
+```text
 https://101rockyprojects.github.io/meloday/?song=o-YBDTqX_ZU&autoplay=1
 ```
+
 > Un clásico...
 
 ---
 
-## 2. Descubre la canción de cada día:
+## 2. Descubre la canción de cada día
+
 El proyecto también permite a través del parámetro `day` elegir el día del año y descubrir qué canción es la de un día en especial. En formato `DD-MM`, donde `DD` son los dígitos del día, y `MM` los dígitos del mes.
 
-### Ejemplo:
+### Ejemplo Canción 28 de mayo
 
 Para saber la canción del día 28 del quinto mes (28 de mayo del respectivo año). O cualquier día que desees:
 
 [Ejemplo Canción del 28 de mayo](https://101rockyprojects.github.io/meloday/?day=28-05)
-```
+
+```text
 https://101rockyprojects.github.io/meloday/?day=28-05
 ```
 
@@ -53,7 +88,8 @@ https://101rockyprojects.github.io/meloday/?day=28-05
 
 ---
 
-# Inspiración detrás del proyecto
+## Inspiración detrás del proyecto
+
 El proyecto nació de una antigua playlist para dedicarle a mi pareja llamada **'Te dedico 365 canciones'**.
 
 > ¿Cómo elegir entre tantas canciones?
@@ -63,11 +99,13 @@ La lista de canciones es útil por sí misma, sin embargo, quería que mi pareja
 Pensé rápidamente en una página para buscar entre todas las canciones indexadas según el día del año en el que se ingrese a la página; así que me puse manos a la obra durante un fin de semana y luego de unos detalles e ideas de personalización.
 
 ## Autor
+
 Este proyecto fue creado por [101rockyprojects](https://github.com/101rockyprojects), pero puedes llamarme **Rocky**.
 
 > Sí, como el de la película. No, no es un apodo o sobrenombre.
 
 ## Contribución
 
-Si tienes alguna duda o deseas contribuir a este proyecto, no dudes en enviar un pull request. 
+Si tienes alguna duda o deseas contribuir a este proyecto, no dudes en enviar un pull request.
+
 ### ¡Estamos abiertos a nuevas ideas y mejoras! :D
