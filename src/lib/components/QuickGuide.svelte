@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import Toast from '@App/lib/components/Toast.svelte';
 
     let youtubeInput = '';
@@ -60,7 +61,7 @@
     }
 
     function getBaseUrl() {
-        return typeof window !== 'undefined' ? window.location.origin + '/meloday' : '';
+        return typeof window !== 'undefined' ? window.location.origin + base : '';
     }
 
     function convertYoutubeLink() {

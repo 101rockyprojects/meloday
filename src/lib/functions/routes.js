@@ -4,11 +4,13 @@ export function parseRoute(url) {
     let day = null;
     let isSpecialDate = false;
 
-    const basePath = '/meloday/';
+    const legacyBasePath = '/meloday/';
     let path = location.pathname;
 
-    if (location.pathname.startsWith(basePath)) {
-        path = location.pathname.slice(basePath.length);
+    if (path.startsWith(legacyBasePath)) {
+        path = path.slice(legacyBasePath.length);
+    } else {
+        path = path.replace(/^\/+/, '');
     }
 
     const videoIdPattern = /^[a-zA-Z0-9_-]{11}$/;
