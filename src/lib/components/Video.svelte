@@ -27,7 +27,7 @@
         <hr class="h-[5px] my-8 border-1 border-opacity-30 hidden lg:block opacity-20 transition-all duration-500 ease-in-out">
         <a class="flex justify-center items-center" href="https://youtube.com/watch?v={videoId}" target="_blank">
             <button class="btn flex justify-center items-center gap-3 text-amoure hover:border-2 hover:border-amoure z-10">
-                <img src="/meloday/images/youtube.png" class="w-6 h-6 md:w-8 md:h-8" alt="youtube-icon">
+                <img src="./images/youtube.png" class="w-6 h-6 md:w-8 md:h-8" alt="youtube-icon">
                 <span class="font-semibold">Ver en Youtube</span>
             </button>
         </a>

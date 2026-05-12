@@ -40,7 +40,7 @@
         </span>
         <div class="flex justify-center items-center flex-row gap-4 sm:gap-6">
             <a href="https://github.com/101rockyprojects" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 text-white/80 hover:hover:scale-110 transition-all no-underline">
-                <img class="w-8" src="/meloday/images/github.png" alt="GitHub icon">
+                <img class="w-8" src="./images/github.png" alt="GitHub icon">
                 <span class="inline font-semibold">GitHub</span>
             </a>
             |
